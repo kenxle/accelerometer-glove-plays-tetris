@@ -1,0 +1,161 @@
+GRT_PIPELINE_FILE_V3.0
+PipelineMode: CLASSIFICATION_MODE
+NumPreprocessingModules: 0
+NumFeatureExtractionModules: 0
+NumPostprocessingModules: 1
+Trained: 1
+Info: 
+PreProcessingModuleDatatypes:
+FeatureExtractionModuleDatatypes:
+ClassificationModuleDatatype:	DTW
+PostProcessingModuleDatatypes:	ClassLabelTimeoutFilter
+GRT_DTW_Model_File_V2.0
+Trained: 1
+UseScaling: 0
+NumInputDimensions: 3
+NumOutputDimensions: 1
+NumTrainingIterationsToConverge: 48
+MinNumEpochs: 0
+MaxNumEpochs: 100
+ValidationSetSize: 20
+LearningRate: 0.1
+MinChange: 1e-05
+UseValidationSet: 0
+RandomiseTrainingOrder: 1
+UseNullRejection: 1
+ClassifierMode: 1
+NullRejectionCoeff: 1.1
+NumClasses: 4
+NullRejectionThresholds:  3.96174 5.50325 7.94592 9.75303
+ClassLabels:  1 2 3 4
+DistanceMethod: 1
+UseSmoothing: 0
+SmoothingFactor: 5
+UseZNormalisation: 0
+OffsetUsingFirstSample: 0
+ConstrainWarpingPath: 1
+Radius: 0.2
+RejectionMode: 0
+NumberOfTemplates: 4
+OverallAverageTemplateLength: 25
+***************TEMPLATE***************
+Template: 1
+ClassLabel: 1
+TimeSeriesLength: 18
+TemplateThreshold: 3.96174
+TrainingMu: 2.90989
+TrainingSigma: 0.956224
+AverageTemplateLength: 22
+TimeSeries: 
+-0.362764	-0.736945	0.722355	
+-0.0838895	-0.750889	0.136718	
+-0.111777	-0.527789	0.150662	
+-0.376708	-0.207083	0.610806	
+-0.460371	-0.137364	0.722355	
+-0.488258	0.127567	1.19644	
+-0.320933	0.155454	1.19644	
+-0.571921	-0.165252	0.262212	
+-1.0739	0.671373	1.19644	
+-0.613752	0.559823	2.22828	
+-0.502202	0.211229	1.09884	
+-0.516146	0.392498	0.88968	
+-0.474314	0.322779	0.792074	
+-0.544033	0.336723	0.736299	
+-0.460371	0.211229	0.66658	
+-0.306989	0.239117	0.66658	
+-0.446427	0.253061	0.610806	
+-0.460371	0.267004	0.652637	
+***************TEMPLATE***************
+Template: 2
+ClassLabel: 2
+TimeSeriesLength: 27
+TemplateThreshold: 5.50325
+TrainingMu: 4.4317
+TrainingSigma: 0.974141
+AverageTemplateLength: 34
+TimeSeries: 
+-0.223327	0.392498	0.903624	
+-0.195439	0.434329	0.959399	
+-0.237271	0.573767	1.02912	
+-0.334877	0.517992	1.08489	
+-0.348821	0.378554	1.00123	
+-0.237271	0.378554	0.945455	
+-0.516146	0.0717919	0.401649	
+-0.167552	0.0578481	0.555031	
+-0.627696	0.253061	0.833905	
+-0.516146	0.169398	0.917568	
+-0.488258	0.113623	0.861793	
+-0.404596	0.0578481	0.833905	
+-0.320933	0.0160169	0.806018	
+-0.139664	0.00207314	0.917568	
+-0.181496	0.155454	1.11278	
+-0.237271	0.155454	1.11278	
+-0.237271	0.280948	1.09884	
+-0.0838895	0.0996793	0.903624	
+-0.251214	-0.248914	0.596862	
+-0.404596	-0.388352	0.847849	
+-0.320933	-0.444127	1.22433	
+-0.237271	-0.695114	1.00123	
+-0.0838895	-0.499902	1.11278	
+-0.125721	-0.611452	1.02912	
+-0.056002	-0.527789	0.88968	
+-0.0281145	-0.541733	0.819962	
+-0.000227046	-0.45807	0.88968	
+***************TEMPLATE***************
+Template: 3
+ClassLabel: 3
+TimeSeriesLength: 15
+TemplateThreshold: 7.94592
+TrainingMu: 5.87978
+TrainingSigma: 1.87831
+AverageTemplateLength: 19
+TimeSeries: 
+0.0694917	-0.262858	-0.100325	
+0.111323	-0.151308	-0.421032	
+-0.181496	0.378554	-1.00667	
+-0.571921	0.81081	-1.21582	
+-1.78503	1.53588	-1.77357	
+-2.76109	1.91237	-2.08034	
+-3.38856	2.41434	-1.45287	
+-3.1794	2.51195	-0.93695	
+-1.31094	2.79082	1.05701	
+-1.42249	1.77293	0.708412	
+-0.056002	0.47616	1.61476	
+-0.0281145	0.0996793	1.61476	
+-0.627696	0.0578481	1.34982	
+-0.753189	-0.123421	0.527143	
+-0.571921	-0.179196	0.331931	
+***************TEMPLATE***************
+Template: 4
+ClassLabel: 4
+TimeSeriesLength: 19
+TemplateThreshold: 9.75303
+TrainingMu: 7.21585
+TrainingSigma: 2.30653
+AverageTemplateLength: 28
+TimeSeries: 
+-0.781077	0.0578481	0.331931	
+-0.79502	0.253061	0.387706	
+-1.18545	0.573767	0.429537	
+-1.36671	0.92236	0.527143	
+-1.88263	1.92631	0.652637	
+-2.37066	2.20518	0.652637	
+-3.36067	1.52194	-0.351313	
+-1.82686	0.950248	-0.407088	
+0.0555479	1.80082	0.861793	
+-0.000227046	0.36461	-0.462863	
+0.571466	0.0439044	-0.532581	
+1.89612	0.0717919	0.345874	
+2.10528	0.685317	1.19644	
+-0.195439	-0.90427	0.0530558	
+-0.265158	-0.625395	0.415593	
+-0.836852	-0.639339	0.596862	
+-0.962345	-0.639339	0.722355	
+-0.976289	-0.555677	1.02912	
+-0.836852	-0.485958	1.09884	
+PostProcessingModule_1
+GRT_CLASS_LABEL_TIMEOUT_FILTER_FILE_V1.0
+NumInputDimensions: 1
+NumOutputDimensions: 1
+FilterMode: 0
+TimeoutDuration: 1011
