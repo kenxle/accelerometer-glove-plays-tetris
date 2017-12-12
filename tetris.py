@@ -90,8 +90,8 @@ tetris_shapes = [
 
 def rotate_clockwise(shape):
 	return [ [ shape[y][x]
-			for y in xrange(len(shape)) ]
-		for x in xrange(len(shape[0]) - 1, -1, -1) ]
+			for y in range(len(shape)) ]
+		for x in range(len(shape[0]) - 1, -1, -1) ]
 
 def check_collision(board, shape, offset):
 	off_x, off_y = offset
@@ -106,7 +106,7 @@ def check_collision(board, shape, offset):
 
 def remove_row(board, row):
 	del board[row]
-	return [[0 for i in xrange(cols)]] + board
+	return [[0 for i in range(cols)]] + board
 	
 def join_matrixes(mat1, mat2, mat2_off):
 	off_x, off_y = mat2_off
@@ -116,9 +116,9 @@ def join_matrixes(mat1, mat2, mat2_off):
 	return mat1
 
 def new_board():
-	board = [ [ 0 for x in xrange(cols) ]
-			for y in xrange(rows) ]
-	board += [[ 1 for x in xrange(cols)]]
+	board = [ [ 0 for x in range(cols) ]
+			for y in range(rows) ]
+	board += [[ 1 for x in range(cols)]]
 	return board
 
 
@@ -126,7 +126,7 @@ def getLastLine(fileName):
 	# lineNum begins from 1 for linecache
 	global lineNum
 	fp = open(fileName)
-	print lineNum
+	print( lineNum)
 	for i, line in enumerate(fp):
 		if i == lineNum:
 			lineNum += 1
@@ -142,13 +142,13 @@ def keyEvent():
 	line = getLastLine(fileName)
 	if line != None and len(line) > 0:
 		if line == '0':
-			print 'left'
+			print ('left')
 			press('left')
 		elif line == '1':
-			print 'right'
+			print('right')
 			press('right')
 		elif line == '2':
-			print 'up'
+			print ('up')
 			press('up')
 
 
@@ -159,7 +159,7 @@ class TetrisApp(object):
 		self.width = cell_size*(cols+6)
 		self.height = cell_size*rows
 		self.rlim = cell_size*cols
-		self.bground_grid = [[ 8 if x%2==y%2 else 0 for x in xrange(cols)] for y in xrange(rows)]
+		self.bground_grid = [[ 8 if x%2==y%2 else 0 for x in range(cols)] for y in range(rows)]
 		
 		self.default_font =  pygame.font.Font(
 			pygame.font.get_default_font(), 12)

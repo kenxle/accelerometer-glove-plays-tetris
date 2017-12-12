@@ -16,7 +16,7 @@ def getLastLine(fileName):
 		l = linecache.getline(fileName, lineNum)
 		return l if len(l) > 0 else None
 	else:
-		print 'File not updated yet'
+		print( 'File not updated yet')
 		return None
 
 
@@ -25,9 +25,9 @@ def getLastAccessedTime(fileName):
 
 
 def appendToFile(fileName):
-	for i in xrange(0, 100):
+	for i in range(0, 100):
 		action = randint(0,2)
-		print i
+		print( i)
 		with open(fileName, "a+") as f:
 			f.write(str(action)+"\n")
 		time.sleep(3)
@@ -42,4 +42,4 @@ if __name__=='__main__':
 	writer.start()
 	writer.join()
 	
-	print 'finished'
+	print( 'finished')
