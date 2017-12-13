@@ -141,13 +141,16 @@ def getLastAccessedTime(fileName):
 def keyEvent():
 	line = getLastLine(fileName)
 	if line != None and len(line) > 0:
-		if line == '0':
+		if line == '2':
 			print 'left'
 			press('left')
 		elif line == '1':
 			print 'right'
 			press('right')
-		elif line == '2':
+		elif line == '3':
+			print 'up'
+			press('up')
+		elif line == '4':
 			print 'up'
 			press('up')
 
